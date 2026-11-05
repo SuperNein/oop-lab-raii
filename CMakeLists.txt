@@ -24,9 +24,9 @@ set(LIB_SRC_FILES ${SRC_FILES})
 list(REMOVE_ITEM LIB_SRC_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
 
 # Build
-add_executable(lab ${SRC_FILES})
-target_include_directories(lab PRIVATE include)
-target_link_libraries(lab PRIVATE compiler_warnings)
+add_executable(app ${SRC_FILES})
+target_include_directories(app PRIVATE include)
+target_link_libraries(app PRIVATE compiler_warnings)
 
 # Google Test
 include(FetchContent)
@@ -42,15 +42,15 @@ include(GoogleTest)
 
 # Test files
 file(GLOB TEST_FILES CONFIGURE_DEPENDS tests/*.cpp)
-add_executable(lab_tests
+add_executable(app_tests
     ${TEST_FILES}
     ${LIB_SRC_FILES}
 )
 
-target_include_directories(lab_tests PRIVATE include)
-target_link_libraries(lab_tests PRIVATE 
+target_include_directories(app_tests PRIVATE include)
+target_link_libraries(app_tests PRIVATE 
     compiler_warnings 
     GTest::gtest_main
 )
 
-gtest_discover_tests(lab_tests)
+gtest_discover_tests(app_tests)
