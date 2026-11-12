@@ -59,15 +59,15 @@ cmake --build build --target app_tests
 - **Linux / macOS:**
 
 ```Bash
-./build/lab
+./build/app
 ```
     
 - **Windows (PowerShell / cmd):**
 
 ```PowerShell
-.\build\lab.exe
+.\build\app.exe
 # Или для конфигурации Visual Studio:
-.\build\Debug\lab.exe
+.\build\Debug\app.exe
 ```
 
 #### Запуск тестов Google Test
@@ -75,15 +75,15 @@ cmake --build build --target app_tests
 - **Linux / macOS:**
 
 ```Bash
-./build/lab_tests
+./build/app_tests
 ```
 
 - **Windows:**
 
 ```PowerShell
-.\build\lab_tests.exe
+.\build\app_tests.exe
 # Или для конфигурации Visual Studio:
-.\build\Debug\lab_tests.exe
+.\build\Debug\app_tests.exe
 ```
 
 ---
@@ -96,12 +96,12 @@ oop-lab-raii/
 ├── CMakeLists.txt
 ├── README.md
 ├── include/
-│   └── matrix.hpp       # Объявления класса Matrix
+│   └── matrix.hpp           # Объявления класса Matrix
 ├── src/
-│   ├── matrix.cpp       # Реализация методов Matrix
-│   └── main.cpp         # Интерактивное текстовое меню
-└── tests/
-    └── test.cpp         # Google Tests
+│   ├── matrix.cpp           # Реализация методов Matrix
+│   └── main.cpp             # Интерактивное текстовое меню
+└── tests/                   # Google Tests
+    └── test_matrix.cpp
 ```
 
 ---
