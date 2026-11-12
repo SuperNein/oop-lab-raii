@@ -11,8 +11,8 @@ Matrix::Matrix(size_t rows, size_t cols, double init_val)
     if (rows == 0 || cols == 0) {
         data_ = nullptr;
 
-        rows = 0;
-        cols = 0;
+        rows_ = 0;
+        cols_ = 0;
 
         return;
     }
